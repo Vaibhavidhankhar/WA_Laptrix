@@ -8,15 +8,19 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f7fa;
+      background: linear-gradient(to bottom, #ffe6f0, #fce4ec);
       color: #333;
       line-height: 1.6;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
     }
     header {
-      background-color: #1e1e2f;
+      background-color: #ffb6c1;
       color: #ffffff;
       padding: 2rem 1rem;
       text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1557200134-90327ee9fafa?fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
     }
     header h1 {
       margin-bottom: 0.5rem;
@@ -24,7 +28,7 @@
     nav {
       display: flex;
       justify-content: center;
-      background-color: #29293d;
+      background-color: #f8bbd0;
       padding: 0.75rem;
     }
     nav a {
@@ -38,8 +42,12 @@
     }
     .hero {
       text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(to right, #cfd9df, #e2ebf0);
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #f8bbd0, #ffe6f0);
+      background-image: url('https://cdn.pixabay.com/photo/2021/07/09/15/17/astronaut-6398092_960_720.jpg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 300px;
     }
     .hero h1 {
       font-size: 3rem;
@@ -59,10 +67,10 @@
       padding: 3rem 1rem;
     }
     .card {
-      background: #ffffff;
+      background: #fff0f5;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
       max-width: 340px;
       transition: transform 0.3s;
     }
@@ -70,25 +78,26 @@
       transform: translateY(-5px);
     }
     .card h3 {
-      color: #1e1e2f;
+      color: #d81b60;
       margin-bottom: 1rem;
     }
     footer {
       text-align: center;
       padding: 1.5rem;
-      background-color: #1e1e2f;
+      background-color: #ffb6c1;
       color: #ffffff;
     }
     .cta {
       text-align: center;
       padding: 2rem;
-      background-color: #f1f1f1;
+      background-color: #fce4ec;
     }
     .cta h2 {
       margin-bottom: 1rem;
+      color: #ad1457;
     }
     .cta button {
-      background-color: #29293d;
+      background-color: #d81b60;
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -97,7 +106,7 @@
       cursor: pointer;
     }
     .cta button:hover {
-      background-color: #44445d;
+      background-color: #ad1457;
     }
   </style>
 </head>
@@ -141,7 +150,7 @@
   <section class="cta" id="try">
     <h2>Ready to Discover the Perfect Laptop?</h2>
     <p>Chat with our AI assistant to get personalized recommendations now.</p>
-    <button onclick="alert('Watson Assistant integration coming soon!')">Try Laptrix Assistant</button>
+    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Try Laptrix Assistant</button>
   </section>
 
   <footer>
