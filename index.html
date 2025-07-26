@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptrix - Laptop Insights & Comparison</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1e1e2f;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #29293d;
+      padding: 0.75rem;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(to right, #cfd9df, #e2ebf0);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #444;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 1rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      max-width: 340px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #1e1e2f;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #1e1e2f;
+      color: #ffffff;
+    }
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f1f1f1;
+    }
+    .cta h2 {
+      margin-bottom: 1rem;
+    }
+    .cta button {
+      background-color: #29293d;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background-color: #44445d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Laptrix</h1>
+    <p>Explore. Compare. Decide. All about laptops — from vintage classics to modern marvels.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+    <a href="#try">Try Assistant</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Your Ultimate Laptop Knowledge Hub</h1>
+    <p>Laptrix is your AI-powered companion for exploring laptops across generations — from the latest ultrabooks to legacy machines that shaped the digital era. Dive deep into specs, compare models, and make smart decisions backed by technology insight.</p>
+  </section>
+
+  <section class="features" id="features">
+    <div class="card">
+      <h3>Intelligent Laptop Search</h3>
+      <p>Use smart filters and AI recommendations to quickly discover the ideal laptop for gaming, work, study, or travel.</p>
+    </div>
+    <div class="card">
+      <h3>Compare by Specs & Brands</h3>
+      <p>Side-by-side comparisons of configurations, pricing, processors, RAM, GPU, and more from top brands past and present.</p>
+    </div>
+    <div class="card">
+      <h3>Evolution Timeline</h3>
+      <p>Trace the evolution of laptop hardware — see how form factors, processors, and features have changed over the years.</p>
+    </div>
+    <div class="card">
+      <h3>Educational Insights</h3>
+      <p>Understand technical jargon, component differences, and performance metrics through simple, digestible explanations.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="try">
+    <h2>Ready to Discover the Perfect Laptop?</h2>
+    <p>Chat with our AI assistant to get personalized recommendations now.</p>
+    <button onclick="alert('Watson Assistant integration coming soon!')">Try Laptrix Assistant</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Laptrix. Empowering Smarter Laptop Choices.
+  </footer>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "d1127888-3110-4c06-b92c-f6f9894e5272",
+      region: "eu-gb",
+      serviceInstanceID: "ebb0b5c5-f402-472c-9875-97fc837871b3",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
