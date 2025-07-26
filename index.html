@@ -7,45 +7,47 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Neue', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #ffe1f0, #f8eaff);
-      color: #3d1d40;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #fce4ec, #f3e5f5);
       background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      color: #4a148c;
     }
     header {
-      background: linear-gradient(to right, #ffb6d1, #e4b1f7);
-      color: #fff;
-      padding: 3rem 1rem 2rem;
+      background: linear-gradient(to right, #f48fb1, #ce93d8);
+      padding: 2rem 1rem;
       text-align: center;
-      background-image: url('https://cdn.pixabay.com/photo/2020/03/14/15/08/magical-4928544_1280.jpg');
-      background-size: cover;
-      background-position: center;
       position: relative;
     }
-    header img.pfp {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      margin-bottom: 1rem;
-    }
     header h1 {
+      margin-bottom: 0.5rem;
       font-size: 3rem;
-      text-shadow: 1px 1px #b765cc;
+      color: #fff;
+      text-shadow: 2px 2px #d81b60;
+    }
+    header p {
+      color: #fff;
+      font-weight: 500;
+    }
+    header img.pfp {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border: 3px solid white;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #f3c7e3;
-      padding: 1rem;
-      gap: 2rem;
+      background-color: #f8bbd0;
+      padding: 0.75rem;
     }
     nav a {
-      color: #ffffff;
-      text-shadow: 1px 1px #c471a0;
+      color: #fff;
+      margin: 0 1.5rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
     }
     nav a:hover {
       text-decoration: underline;
@@ -53,20 +55,22 @@
     .hero {
       text-align: center;
       padding: 4rem 2rem;
-      background: linear-gradient(to right, #fbd3e9, #bbacf9);
-      background-image: url('https://cdn.pixabay.com/photo/2023/05/04/10/23/anime-girl-7968964_1280.jpg');
+      background: linear-gradient(to right, #fce4ec, #f8bbd0);
+      background-image: url('https://cdn.pixabay.com/photo/2021/07/09/15/17/astronaut-6398092_960_720.jpg');
       background-repeat: no-repeat;
       background-position: right bottom;
-      background-size: 280px;
+      background-size: 300px;
     }
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
+      color: #ad1457;
     }
     .hero p {
       max-width: 800px;
       margin: auto;
       font-size: 1.2rem;
+      color: #6a1b9a;
     }
     .features {
       display: flex;
@@ -76,55 +80,55 @@
       padding: 3rem 1rem;
     }
     .card {
-      background: #ffe4f0;
+      background: #fff0f5;
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 8px 30px rgba(220, 144, 202, 0.3);
-      max-width: 320px;
-      transition: transform 0.3s;
+      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
+      max-width: 340px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(255, 105, 180, 0.4);
     }
     .card h3 {
-      color: #a74fbf;
+      color: #d81b60;
       margin-bottom: 1rem;
     }
     footer {
       text-align: center;
       padding: 1.5rem;
-      background-color: #de98d3;
+      background-color: #f48fb1;
       color: #ffffff;
     }
     .cta {
       text-align: center;
-      padding: 3rem;
-      background: linear-gradient(to right, #fce4ec, #e1bee7);
+      padding: 2rem;
+      background-color: #fce4ec;
     }
     .cta h2 {
       margin-bottom: 1rem;
-      color: #b02dac;
+      color: #8e24aa;
     }
     .cta button {
-      background-color: #ba68c8;
+      background-color: #d81b60;
       color: white;
       border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 10px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
-      font-weight: bold;
     }
     .cta button:hover {
-      background-color: #ab47bc;
+      background-color: #ad1457;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://cdn.pixabay.com/photo/2021/11/01/12/50/anime-6760936_1280.png" alt="Anime Character" class="pfp">
-    <h1>Laptrix</h1>
-    <p>Explore. Compare. Decide. From vintage legends to modern wonders, guided by your kawaii AI buddy!</p>
+    <img src="https://i.pinimg.com/736x/1e/bd/4a/1ebd4a6b4f0ec51db14d61e75cd4c2a4.jpg" alt="Anime PFP" class="pfp">
+    <h1><span style="color: #fff176; text-shadow: 0 0 10px #d500f9;">LAPTRIX</span></h1>
+    <p>Explore. Compare. Decide. All about laptops — from vintage classics to modern marvels.</p>
   </header>
 
   <nav>
@@ -135,37 +139,37 @@
   </nav>
 
   <section class="hero">
-    <h1>Your Kawaii Laptop Companion</h1>
-    <p>Laptrix is your cheerful guide to laptop evolution! Chat with your magical anime assistant to compare models, find the best device, and learn all about specs and tech history!</p>
+    <h1>Your Magical Laptop Guide</h1>
+    <p>Laptrix is your anime-styled, AI-powered companion for exploring laptops across generations — from ultrabooks to legacy tech legends!</p>
   </section>
 
   <section class="features" id="features">
     <div class="card">
-      <h3>Smart Search</h3>
-      <p>Find laptops with AI help for gaming, work, or study in seconds!</p>
+      <h3>✨ Smart Laptop Finder</h3>
+      <p>Discover the perfect laptop for gaming, work, or school with cute AI-powered filtering.</p>
     </div>
     <div class="card">
-      <h3>Compare Specs</h3>
-      <p>View detailed side-by-side laptop specs from past to present.</p>
+      <h3>🌸 Spec Comparisons</h3>
+      <p>Compare processors, RAM, and GPUs side-by-side for top brands and models.</p>
     </div>
     <div class="card">
-      <h3>Laptop Timeline</h3>
-      <p>See how laptops evolved in design, power, and cuteness!</p>
+      <h3>💖 Laptop Evolution</h3>
+      <p>Track how laptops changed through time with adorable visual storytelling.</p>
     </div>
     <div class="card">
-      <h3>Simple Explanations</h3>
-      <p>Learn what all the tech terms mean — explained clearly and sweetly!</p>
+      <h3>🎓 Learn & Understand</h3>
+      <p>Get sweet summaries of specs and hardware — made simple and cute!</p>
     </div>
   </section>
 
   <section class="cta" id="try">
-    <h2>Need Laptop Help?</h2>
-    <p>Let our cute AI assistant help you discover your dream device now!</p>
-    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Talk to Laptrix!</button>
+    <h2>Want Personalized Help?</h2>
+    <p>Chat with our magical anime assistant to find your dream laptop now.</p>
+    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Try Laptrix Assistant</button>
   </section>
 
   <footer>
-    &copy; 2025 Laptrix. Tech meets kawaii for smarter decisions 💖
+    &copy; 2025 <strong>LAPTRIX</strong> — A magical journey through laptops ✨
   </footer>
 
   <script>
