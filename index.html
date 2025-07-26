@@ -2,63 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laptrix - Laptop Insights & Comparison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laptrix – Discover Magical Laptops</title>
   <style>
+    :root {
+      --lavender: #f3e5f5;
+      --cherry: #ffccd5;
+      --purple: #ce93d8;
+      --hotpink: #f06292;
+      --light-bg: #fff0f5;
+      --text-color: #3d2953;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #ffe6f0, #fce4ec);
-      color: #333;
-      line-height: 1.6;
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to bottom right, var(--lavender), var(--cherry));
+      color: var(--text-color);
+      transition: background 0.5s ease, color 0.5s ease;
+      overflow-x: hidden;
     }
+
+    body.night {
+      background: linear-gradient(to bottom right, #2e003e, #000);
+      color: #f3e5f5;
+    }
+
     header {
-      background-color: #ffb6c1;
-      color: #ffffff;
-      padding: 2rem 1rem;
+      background: url('https://cdn.pixabay.com/photo/2021/07/09/15/17/astronaut-6398092_960_720.jpg') no-repeat center/cover;
       text-align: center;
-      background-image: url('https://images.unsplash.com/photo-1557200134-90327ee9fafa?fit=crop&w=1400&q=80');
-      background-size: cover;
-      background-position: center;
+      padding: 5rem 2rem;
+      color: white;
+      position: relative;
     }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 182, 193, 0.5);
+    }
+
     header h1 {
-      margin-bottom: 0.5rem;
+      font-size: 4rem;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 5px #c2185b;
     }
+
+    header p {
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
     nav {
       display: flex;
       justify-content: center;
-      background-color: #f8bbd0;
-      padding: 0.75rem;
+      gap: 2rem;
+      background-color: var(--purple);
+      padding: 1rem;
     }
+
     nav a {
-      color: #ffffff;
-      margin: 0 1.5rem;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
+    .toggle-mode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 0.5rem 1rem;
+      background: var(--hotpink);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
     .hero {
       text-align: center;
       padding: 4rem 2rem;
-      background: linear-gradient(to right, #f8bbd0, #ffe6f0);
-      background-image: url('https://cdn.pixabay.com/photo/2021/07/09/15/17/astronaut-6398092_960_720.jpg');
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-size: 300px;
     }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.2rem;
-      color: #444;
-    }
+
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -66,97 +99,113 @@
       gap: 2rem;
       padding: 3rem 1rem;
     }
+
     .card {
-      background: #fff0f5;
-      border-radius: 12px;
+      background: var(--light-bg);
+      border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
-      max-width: 340px;
+      width: 300px;
+      box-shadow: 0 4px 16px rgba(186, 104, 200, 0.2);
       transition: transform 0.3s;
     }
+
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
     }
-    .card h3 {
-      color: #d81b60;
-      margin-bottom: 1rem;
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 2rem;
     }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #ffb6c1;
-      color: #ffffff;
+
+    .carousel img {
+      height: 200px;
+      border-radius: 12px;
+      transition: transform 0.3s;
     }
+
+    .carousel img:hover {
+      transform: scale(1.1);
+    }
+
     .cta {
       text-align: center;
-      padding: 2rem;
-      background-color: #fce4ec;
+      background: linear-gradient(to right, var(--cherry), var(--lavender));
+      padding: 3rem 1rem;
     }
-    .cta h2 {
-      margin-bottom: 1rem;
-      color: #ad1457;
-    }
+
     .cta button {
-      background-color: #d81b60;
+      background: var(--hotpink);
       color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      padding: 1rem 2rem;
       font-size: 1rem;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
     }
-    .cta button:hover {
-      background-color: #ad1457;
+
+    footer {
+      background-color: var(--purple);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
     }
   </style>
 </head>
 <body>
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Night Mode</button>
+
   <header>
-    <h1>Laptrix</h1>
-    <p>Explore. Compare. Decide. All about laptops — from vintage classics to modern marvels.</p>
+    <h1>🌟 LAPTRIX 🌟</h1>
+    <p>Explore laptops from legacy to futuristic with AI-powered guidance.</p>
   </header>
 
   <nav>
     <a href="#">Home</a>
     <a href="#features">Features</a>
-    <a href="#contact">Contact</a>
-    <a href="#try">Try Assistant</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#try">Assistant</a>
   </nav>
 
   <section class="hero">
-    <h1>Your Ultimate Laptop Knowledge Hub</h1>
-    <p>Laptrix is your AI-powered companion for exploring laptops across generations — from the latest ultrabooks to legacy machines that shaped the digital era. Dive deep into specs, compare models, and make smart decisions backed by technology insight.</p>
+    <h2>Welcome to Laptrix</h2>
+    <p>Your magical laptop discovery tool. Compare laptops, explore trends, and chat with AI to find your ideal device!</p>
   </section>
 
   <section class="features" id="features">
     <div class="card">
-      <h3>Intelligent Laptop Search</h3>
-      <p>Use smart filters and AI recommendations to quickly discover the ideal laptop for gaming, work, study, or travel.</p>
+      <h3>🔍 Search Laptops</h3>
+      <p>Instantly find devices matching your needs.</p>
     </div>
     <div class="card">
-      <h3>Compare by Specs & Brands</h3>
-      <p>Side-by-side comparisons of configurations, pricing, processors, RAM, GPU, and more from top brands past and present.</p>
+      <h3>📊 Compare Specs</h3>
+      <p>Compare performance, battery life, and build.</p>
     </div>
     <div class="card">
-      <h3>Evolution Timeline</h3>
-      <p>Trace the evolution of laptop hardware — see how form factors, processors, and features have changed over the years.</p>
+      <h3>🧠 Learn with AI</h3>
+      <p>Understand tech like CPU, GPU, RAM easily.</p>
     </div>
-    <div class="card">
-      <h3>Educational Insights</h3>
-      <p>Understand technical jargon, component differences, and performance metrics through simple, digestible explanations.</p>
-    </div>
+  </section>
+
+  <section class="carousel" id="gallery">
+    <img src="https://cdn.pixabay.com/photo/2017/08/10/01/45/laptop-2617845_960_720.jpg" alt="Laptop 1" />
+    <img src="https://cdn.pixabay.com/photo/2018/01/20/08/33/laptop-3091956_960_720.jpg" alt="Laptop 2" />
+    <img src="https://cdn.pixabay.com/photo/2019/06/17/19/19/laptop-4285545_960_720.jpg" alt="Laptop 3" />
   </section>
 
   <section class="cta" id="try">
-    <h2>Ready to Discover the Perfect Laptop?</h2>
-    <p>Chat with our AI assistant to get personalized recommendations now.</p>
-    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Try Laptrix Assistant</button>
+    <h2>Talk to Laptrix Assistant</h2>
+    <p>Get smart laptop suggestions & guidance from our AI.</p>
+    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Launch Chat</button>
   </section>
 
   <footer>
-    &copy; 2025 Laptrix. Empowering Smarter Laptop Choices.
+    &copy; 2025 Laptrix. All rights reserved.
   </footer>
 
+  <!-- Watson Assistant -->
   <script>
     window.watsonAssistantChatOptions = {
       integrationID: "d1127888-3110-4c06-b92c-f6f9894e5272",
@@ -164,11 +213,17 @@
       serviceInstanceID: "ebb0b5c5-f402-472c-9875-97fc837871b3",
       onLoad: async (instance) => { await instance.render(); }
     };
-    setTimeout(function(){
+    setTimeout(function() {
       const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+              "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
+
+    function toggleMode() {
+      document.body.classList.toggle('night');
+    }
   </script>
 </body>
 </html>
