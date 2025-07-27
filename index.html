@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laptrix - Laptop Insights & Comparison</title>
+  <title>LAPTRIX - Magical Laptop Insights</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #fce4ec, #f3e5f5);
+      background: linear-gradient(to bottom, #d500f9, #f8bbd0);
       background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-      color: #4a148c;
+      color: #f3e5f5;
+      overflow-x: hidden;
     }
     header {
-      background: linear-gradient(to right, #f48fb1, #ce93d8);
+      background: linear-gradient(to right, #880e4f, #6a1b9a);
       padding: 2rem 1rem;
       text-align: center;
       position: relative;
     }
     header h1 {
       margin-bottom: 0.5rem;
-      font-size: 3rem;
-      color: #fff;
-      text-shadow: 2px 2px #d81b60;
+      font-size: 3.5rem;
+      color: #fff176;
+      text-shadow: 0 0 15px #f06292;
+      letter-spacing: 2px;
     }
     header p {
-      color: #fff;
+      color: #fce4ec;
       font-weight: 500;
     }
     header img.pfp {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       position: absolute;
       top: 20px;
@@ -40,7 +42,7 @@
     nav {
       display: flex;
       justify-content: center;
-      background-color: #f8bbd0;
+      background-color: #c2185b;
       padding: 0.75rem;
     }
     nav a {
@@ -48,29 +50,34 @@
       margin: 0 1.5rem;
       text-decoration: none;
       font-weight: bold;
+      transition: all 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #f8bbd0;
+      text-shadow: 0 0 8px #f06292;
     }
     .hero {
       text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(to right, #fce4ec, #f8bbd0);
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #ba68c8, #f48fb1);
       background-image: url('https://cdn.pixabay.com/photo/2021/07/09/15/17/astronaut-6398092_960_720.jpg');
       background-repeat: no-repeat;
       background-position: right bottom;
-      background-size: 300px;
+      background-size: 320px;
+      position: relative;
+      overflow: hidden;
     }
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #ad1457;
+      color: #ffffff;
+      text-shadow: 0 0 10px #d81b60;
     }
     .hero p {
       max-width: 800px;
       margin: auto;
       font-size: 1.2rem;
-      color: #6a1b9a;
+      color: #fce4ec;
     }
     .features {
       display: flex;
@@ -80,35 +87,32 @@
       padding: 3rem 1rem;
     }
     .card {
-      background: #fff0f5;
+      background: #f8bbd0;
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
+      box-shadow: 0 8px 20px rgba(186, 104, 200, 0.4);
       max-width: 340px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(255, 105, 180, 0.4);
+      box-shadow: 0 12px 28px rgba(240, 98, 146, 0.5);
     }
     .card h3 {
-      color: #d81b60;
+      color: #880e4f;
       margin-bottom: 1rem;
     }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #f48fb1;
-      color: #ffffff;
+    .card p {
+      color: #4a148c;
     }
     .cta {
       text-align: center;
       padding: 2rem;
-      background-color: #fce4ec;
+      background-color: #f3e5f5;
     }
     .cta h2 {
       margin-bottom: 1rem;
-      color: #8e24aa;
+      color: #6a1b9a;
     }
     .cta button {
       background-color: #d81b60;
@@ -122,12 +126,40 @@
     .cta button:hover {
       background-color: #ad1457;
     }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #6a1b9a;
+      color: #f3e5f5;
+    }
+    .sparkles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .sparkles span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #fff9c4 0%, #f48fb1 70%, transparent 100%);
+      border-radius: 50%;
+      animation: sparkle 3s infinite ease-in-out;
+    }
+    @keyframes sparkle {
+      0% { opacity: 0; transform: scale(0.5) translateY(0); }
+      50% { opacity: 1; transform: scale(1.2) translateY(-20px); }
+      100% { opacity: 0; transform: scale(0.5) translateY(0); }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="https://i.pinimg.com/736x/1e/bd/4a/1ebd4a6b4f0ec51db14d61e75cd4c2a4.jpg" alt="Anime PFP" class="pfp">
-    <h1><span style="color: #fff176; text-shadow: 0 0 10px #d500f9;">LAPTRIX</span></h1>
+    <h1><span style="text-shadow: 0 0 15px #ff4081;">✨ LAPTRIX ✨</span></h1>
     <p>Explore. Compare. Decide. All about laptops — from vintage classics to modern marvels.</p>
   </header>
 
@@ -139,37 +171,45 @@
   </nav>
 
   <section class="hero">
+    <div class="sparkles">
+      <span style="top:10%;left:20%;animation-delay:0s"></span>
+      <span style="top:30%;left:60%;animation-delay:1s"></span>
+      <span style="top:50%;left:40%;animation-delay:2s"></span>
+      <span style="top:70%;left:80%;animation-delay:3s"></span>
+      <span style="top:20%;left:70%;animation-delay:1.5s"></span>
+      <span style="top:60%;left:10%;animation-delay:2.5s"></span>
+    </div>
     <h1>Your Magical Laptop Guide</h1>
-    <p>Laptrix is your anime-styled, AI-powered companion for exploring laptops across generations — from ultrabooks to legacy tech legends!</p>
+    <p>LAPTRIX is your anime-styled, AI-powered companion for exploring laptops across generations — from ultrabooks to legacy legends!</p>
   </section>
 
   <section class="features" id="features">
     <div class="card">
-      <h3>✨ Smart Laptop Finder</h3>
-      <p>Discover the perfect laptop for gaming, work, or school with cute AI-powered filtering.</p>
+      <h3>🔍 Smart Laptop Finder</h3>
+      <p>Discover the perfect laptop for gaming, work, or school with kawaii AI-powered filtering.</p>
     </div>
     <div class="card">
-      <h3>🌸 Spec Comparisons</h3>
+      <h3>📊 Spec Comparisons</h3>
       <p>Compare processors, RAM, and GPUs side-by-side for top brands and models.</p>
     </div>
     <div class="card">
-      <h3>💖 Laptop Evolution</h3>
-      <p>Track how laptops changed through time with adorable visual storytelling.</p>
+      <h3>🧚‍♀️ Laptop Evolution</h3>
+      <p>Track how laptops changed through time with dreamy visual storytelling.</p>
     </div>
     <div class="card">
-      <h3>🎓 Learn & Understand</h3>
-      <p>Get sweet summaries of specs and hardware — made simple and cute!</p>
+      <h3>🎀 Learn & Understand</h3>
+      <p>Get cute summaries of specs and hardware — simple, fun, and magical!</p>
     </div>
   </section>
 
   <section class="cta" id="try">
-    <h2>Want Personalized Help?</h2>
-    <p>Chat with our magical anime assistant to find your dream laptop now.</p>
-    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Try Laptrix Assistant</button>
+    <h2>Need a Little Help?</h2>
+    <p>Chat with our magical assistant now and find your dream laptop!</p>
+    <button onclick="WatsonAssistantChatOptions.onLoad && WatsonAssistantChatOptions.onLoad(instance)">Chat with LAPTRIX</button>
   </section>
 
   <footer>
-    &copy; 2025 <strong>LAPTRIX</strong> — A magical journey through laptops ✨
+    &copy; 2025 <strong>LAPTRIX</strong> — Dream, Decide & Discover 🌛
   </footer>
 
   <script>
@@ -180,8 +220,8 @@
       onLoad: async (instance) => { await instance.render(); }
     };
     setTimeout(function(){
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
   </script>
